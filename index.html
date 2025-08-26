@@ -41,6 +41,31 @@
     esriImagery["hybrid"].addTo(map);
     L.control.layers(esriImagery).addTo(map);
 
+    // Carica il file GeoJSON dei confini comunali
+    fetch('cosseria.geojson')
+      .then(response => response.json())
+      .then(data => {
+        const geoLayer = L.geoJSON(data, {
+          style: function (feature) {
+            return {
+              color: "orange",
+              weight: 4,
+              fillOpacity: 0.3
+            };
+          },
+          onEachFeature: function (feature, layer) {
+            const nome = feature.properties.name || "Elemento";
+            layer.bindPopup(`<strong>${nome}</strong>`);
+          }
+        }).addTo(map);
+
+        // Centra la mappa sull'estensione del file
+        map.fitBounds(geoLayer.getBounds());
+      })
+      .catch(error => {
+        console.error("Errore nel caricamento di coss.geojson:", error);
+      });
+
     // Carica il file toponimi.json
     fetch('toponimi.json')
       .then(response => {
@@ -69,4 +94,5 @@
   </script>
 </body>
 </html>
+
 
