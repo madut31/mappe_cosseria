@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mappa con Toponimi da JSON</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    #map { height: 100vh; margin: 0; padding: 0; }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Inizializza la mappa
+    const map = L.map('map').setView([44.3735, 8.2336], 15);
+
+    // Layer base
+    const esriImagery = {
+      "osm": L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }),
+      "satellite": L.tileLayer('https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+      }),
+      "hybrid": L.layerGroup([
+        L.tileLayer('https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+          maxZoom: 20,
+          subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        }),
+        L.tileLayer('https://{s}.google.com/vt/lyrs=h&x={x}&y={y}&z={z}', {
+          maxZoom: 20,
+          subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        })
+      ])
+    };
+
+    esriImagery["hybrid"].addTo(map);
+    L.control.layers(esriImagery).addTo(map);
+
+    // Carica il file toponimi.json
+    fetch('toponimi.json')
+      .then(response => {
+        if (!response.ok) throw new Error("Impossibile caricare il file JSON");
+        return response.json();
+      })
+      .then(data => {
+        // Aggiungi i marker alla mappa
+        L.geoJSON(data, {
+          pointToLayer: function (feature, latlng) {
+            const marker = L.marker(latlng);
+            marker.bindPopup(`<strong>${feature.properties.name}</strong><br>${feature.properties.description}`);
+            marker.bindTooltip(feature.properties.name, {
+              permanent: true,
+              direction: 'top',
+              offset: [0, -10],
+              className: 'toponimo-label'
+            });
+            return marker;
+          }
+        }).addTo(map);
+      })
+      .catch(error => {
+        console.error("Errore nel caricamento dei toponimi:", error);
+      });
+  </script>
+</body>
+</html>
