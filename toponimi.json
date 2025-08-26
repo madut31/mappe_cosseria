@@ -44,6 +44,18 @@
         "type": "Point",
         "coordinates": [8.262137, 44.376035]
       }
-    }
+    },
+	{
+      "type": "Feature",
+      "properties": {
+        "name": "Cuori",
+        "description": "Toponimo non presente su Google Maps"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [8.235329, 44.373335]
+      }
+    }  
   ]
 }
+
