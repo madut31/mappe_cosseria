@@ -1,0 +1,161 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Le Mule",
+        "description": "Toponimo non presente su Google Maps"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [8.238092, 44.378697]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bocchetto" },
+      "geometry": { "type": "Point", "coordinates": [8.231722, 44.380194] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bosi" },
+      "geometry": { "type": "Point", "coordinates": [8.235194, 44.367500] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bricco" },
+      "geometry": { "type": "Point", "coordinates": [8.255833, 44.369611] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Bricco sanita" },
+      "geometry": { "type": "Point", "coordinates": [8.241500, 44.367694] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Calizzani" },
+      "geometry": { "type": "Point", "coordinates": [8.232806, 44.365694] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Camprevi" },
+      "geometry": { "type": "Point", "coordinates": [8.245944, 44.379000] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Canapali" },
+      "geometry": { "type": "Point", "coordinates": [8.242833, 44.372722] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Case di Bertulla/Bertulla" },
+      "geometry": { "type": "Point", "coordinates": [8.225972, 44.385417] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Case Patetta" },
+      "geometry": { "type": "Point", "coordinates": [8.232965, 44.373677] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Case Rossi" },
+      "geometry": { "type": "Point", "coordinates": [8.237306, 44.374389] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Chiesa" },
+      "geometry": { "type": "Point", "coordinates": [8.234877, 44.368738] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Cornareto" },
+      "geometry": { "type": "Point", "coordinates": [8.268017, 44.364234] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Gallo" },
+      "geometry": { "type": "Point", "coordinates": [8.254639, 44.373389] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Giroso" },
+      "geometry": { "type": "Point", "coordinates": [8.233332, 44.372091] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Giunchi" },
+      "geometry": { "type": "Point", "coordinates": [8.240583, 44.365750] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Localita' Patetta" },
+      "geometry": { "type": "Point", "coordinates": [8.233750, 44.375306] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Montecala" },
+      "geometry": { "type": "Point", "coordinates": [8.228605, 44.359245] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Mussi" },
+      "geometry": { "type": "Point", "coordinates": [8.239932, 44.368273] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Nicampi" },
+      "geometry": { "type": "Point", "coordinates": [8.227083, 44.370056] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Pille" },
+      "geometry": { "type": "Point", "coordinates": [8.226444, 44.383167] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Ponteprino" },
+      "geometry": { "type": "Point", "coordinates": [8.273306, 44.371306] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Prino" },
+      "geometry": { "type": "Point", "coordinates": [8.230306, 44.368694] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Quassolo" },
+      "geometry": { "type": "Point", "coordinates": [8.283389, 44.365083] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Rossi" },
+      "geometry": { "type": "Point", "coordinates": [8.237306, 44.374389] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Rossignoli" },
+      "geometry": { "type": "Point", "coordinates": [8.230472, 44.388833] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Scravata" },
+      "geometry": { "type": "Point", "coordinates": [8.229583, 44.387417] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Tapollo" },
+      "geometry": { "type": "Point", "coordinates": [8.253750, 44.368556] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Valle" },
+      "geometry": { "type": "Point", "coordinates": [8.234756, 44.375713] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Vuaie" },
+      "geometry": { "type": "Point", "coordinates": [8.245944, 44.379000] }
+    }
+  ]
+}
